@@ -2,12 +2,12 @@ name:                simple
 version:             0.1.0.0
 synopsis:            Initial project template from stack
 description:         Please see README.md
-homepage:            https://github.com/githubuser/simple#readme
+homepage:            https://github.com/philderbeast/stack-profile-embed-string
 license:             BSD3
 license-file:        LICENSE
-author:              Author name here
-maintainer:          example@example.com
-copyright:           2017 Author name here
+author:              Phil de Joux
+maintainer:          philderbeast@gmail.com
+copyright:           2017 Phil de Joux
 category:            Web
 build-type:          Simple
 extra-source-files:  README.md
@@ -15,8 +15,9 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  exposed-modules:     Lib
+  exposed-modules:     EmbedString
   build-depends:       base >= 4.7 && < 5
+                     , template-haskell
   default-language:    Haskell2010
 
 executable simple-exe
@@ -25,6 +26,7 @@ executable simple-exe
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   build-depends:       base
                      , simple
+                     , raw-strings-qq
   default-language:    Haskell2010
 
 test-suite simple-test
@@ -38,4 +40,4 @@ test-suite simple-test
 
 source-repository head
   type:     git
-  location: https://github.com/githubuser/simple
+  location: https://github.com/philderbeast/stack-profile-embed-string
