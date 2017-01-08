@@ -13,19 +13,13 @@ build-type:          Simple
 extra-source-files:  README.md
 cabal-version:       >=1.10
 
-library
-  hs-source-dirs:      src
-  exposed-modules:     EmbedString
-  build-depends:       base
-                     , template-haskell
-  default-language:    Haskell2010
-
 executable simple-exe
-  hs-source-dirs:      app
+  hs-source-dirs:      app, src
   main-is:             Main.hs
+  other-modules:       EmbedString
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   build-depends:       base
-                     , simple
+                     , template-haskell
                      , raw-strings-qq
   default-language:    Haskell2010
 
